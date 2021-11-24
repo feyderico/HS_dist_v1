@@ -63,7 +63,6 @@ const initialize = () => {
 				onboardButton.innerHTML = "Approve";
 				textInfo.innerHTML = "Then press APPROVE to allow to spend WETH."
 				onboardButton.disabled=false;
-				console.log(clickCount);
 
 				}
 				else{ 
@@ -187,13 +186,14 @@ const initialize = () => {
 		console.log(result);
 		const json_URL = "https://ipfs.io/ipfs/" + result.substring(7);
 		console.log(json_URL);
-		img.src = "https://ipfs.io/ipfs/QmWitDk4S9wzR9fysnjyusv91Gn8x6HrUuaSYFTXij5LvH/loading_space.mp4";
+		img.src = "images/loading_space.mp4";
 
 		try{
 			$.getJSON(json_URL, function(data) {
 				console.log("requesting ")
 				var img_URL = data.image;
-				const image_URI = "https://ipfs.io/ipfs/" + img_URL.substring(7);
+
+				//const image_URI = "https://ipfs.io/ipfs/" + img_URL.substring(7);
 				console.log(image_URI);			
 	
 				textInfo.innerHTML = "Here is what you get:" + "<br>" +

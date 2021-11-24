@@ -451,7 +451,7 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
       <!-- Display the countdown timer in an element -->
       <script>
       // Set the date we're counting down to
-      var countDownDate = new Date("Nov 23, 2021 14:00:00").getTime();
+      var countDownDate = new Date("Nov 24, 2021 21:00:00").getTime();
 
       // Update the count down every 1 second
       var x = setInterval(function() {
@@ -482,5 +482,19 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
         }
       }, 1000);
       </script>  
+          <!--*************** LOADING WEBSITE **********-->
+    <div class="loader-wrapper">
+      <span class="loader">
+        <video src="images/logo_movie.mp4" autoplay loop muted width="300" height="300">
+        </span>
+        <h4 class="loading-text">Loading...</h4>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+       $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+      });
+    </script>
+
 </body>
 </html>
